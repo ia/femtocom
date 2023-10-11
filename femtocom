@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+### Documentation (sort of)
+#
+# config sample of ~/.femtocomrc by hardcoded variable CONF
+# $ cat ~/.femtocomrc
+# 
+# 
+# ; options from this section will be applied to ALL configurations
+# [GLOBAL]
+# 	echo=
+#   ; turns into `--echo' for picocom command line
+# 
+# 
+# ; GLOBAL options + classic default: 115200@8N1 on ttyUSB0
+# [default]
+# 	baud=115200
+#   ; turns into `--baud 115200' for picocom command line and so on
+# 	databits=8
+# 	parity=n
+# 	flow=n
+# 	stopbits=1
+# 	port=/dev/ttyUSB0
+#   ; turns into `picocom OPTIONS /dev/ttyUSB0`
+# 
+# 
+# [myhwtool]
+# 	baud=9600
+# 	databits=8
+# 	parity=n
+# 	flow=n
+# 	stopbits=1
+# 
+# $
+# 
+# ; hence, the usage will be just as easy as:
+# 
+# $ femtocom myhwtool
+# 
+# which will turns into
+# 
+# $ picocom --echo --baud 9600 --databits 8 --parity n --flow n --stopbits 1 /dev/myhwtool
+# 
+
+### TODO: for v2 - add parser & options:
+### 		--list option to list "devices" from config
+###			--dump option to generate args for picocom from device without run
+
+### init
+
+CONF=~/.femtocomrc
+
+set -e
+test -n "${DEBUG}" && set -x
+
+### main
+
+# extract global settings
+globals="$(sed '1,/^\[GLOBAL\]/d;/^ *$/,$d;  s/^\t*//g;  s/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
+
+if [ -n "${1}" ]; then
+	section="${1}"
+else
+	section="default"
+fi;
+
+# extract settings for provided config section name
+options="$(sed '1,/^\['"${section}"'\]/d;/^ *$/,$d;  s/^\t*//g;  s/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
+
+# port value processing:
+
+# if port is not provided, then use ttyUSB0 for default section
+# if port is not provided and section is not default, then use name of section for port (must be pre-configured using udev)
+
+if [ -z "`echo ${options} | grep "/dev/"`" ]; then
+	if [ "${section}" = "default" ]; then
+		args="${globals} ${options} /dev/ttyUSB0"
+	else
+		args="${globals} ${options} /dev/${section}"
+	fi;
+else
+	args="${globals} "`echo "${options}" | sed 's,--port,,'`""
+fi;
+
+pretty_args="`echo ${args} | tr '\n' ' '`"
+
+echo -ne "\n====>>>> exit: hold CTRL and press: A X\n\n"
+echo -ne "====>>>> picocom ${pretty_args} \n\n"
+
+/media/ia/DATA/data/devel/picocom/picocom    ${pretty_args}
+#picocom ${pretty_args}
+
+exit 0
+
