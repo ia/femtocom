@@ -87,8 +87,7 @@ pretty_args="`echo ${args} | tr '\n' ' '`"
 echo -ne "\n====>>>> exit: hold CTRL and press: A X\n\n"
 echo -ne "====>>>> picocom ${pretty_args} \n\n"
 
-/media/ia/DATA/data/devel/picocom/picocom    ${pretty_args}
-#picocom ${pretty_args}
+picocom ${pretty_args}
 
 exit 0
 
