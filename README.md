@@ -13,11 +13,12 @@ configuration file for femtocom
 ### picocom
 
 Install picocom:
-- using your distribution repositories like:
-apt install picocom
-dnf install picocom
-etc.
+- using package manager of your distribution like:
+`apt install picocom`
+or
+`dnf install picocom`
+(or something like that)
 
-- or from sources:
+- using sources like:
 
 
