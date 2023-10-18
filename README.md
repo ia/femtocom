@@ -20,5 +20,8 @@ or
 (or something like that)
 
 - using sources like:
-
+```
+git clone ...
+make
+```
 
