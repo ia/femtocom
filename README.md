@@ -26,3 +26,5 @@ cd picocom
 make
 ```
 
+
+### udev rule
