@@ -21,7 +21,7 @@ or
 
 - using sources like:
 ```
-git clone ...
+git clone https://github.com/npat-efault/picocom
 make
 ```
 
