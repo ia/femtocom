@@ -28,3 +28,7 @@ make
 
 
 ### udev rule
+
+Add custom rule for compatible device:
+
+
