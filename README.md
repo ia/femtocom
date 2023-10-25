@@ -35,5 +35,7 @@ SUBSYSTEM=="tty", ATTRS{bcdDevice}=="____", ATTRS{idProduct}=="____", ATTRS{idVe
 ```
 
 - restart udev to apply changes:
-
+```
+$ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
+```
 
