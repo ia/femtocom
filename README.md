@@ -29,12 +29,12 @@ make
 
 ### udev rule
 
-- add custom rule for compatible device:
+- add custom rule for a compatible device:
 ```
 SUBSYSTEM=="tty", ATTRS{bcdDevice}=="____", ATTRS{idProduct}=="____", ATTRS{idVendor}=="____", MODE="0664", GROUP="plugdev", SYMLINK+="CUSTOM_NAME"
 ```
 
-- restart udev to apply changes:
+- restart `udev` to apply changes:
 ```
 $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 ```
