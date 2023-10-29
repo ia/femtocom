@@ -39,3 +39,9 @@ SUBSYSTEM=="tty", ATTRS{bcdDevice}=="____", ATTRS{idProduct}=="____", ATTRS{idVe
 $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 ```
 
+
+### femtocom config
+
+
+
+
