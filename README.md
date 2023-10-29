@@ -42,6 +42,6 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 ### femtocom config
 
-
+TBA
 
 
