@@ -42,6 +42,11 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 ### femtocom config
 
+- create file `~/.femtocomrc`:
+```
+$ touch ~/.femtocomrc
+```
+
 TBA
 
 
