@@ -48,6 +48,16 @@ $ touch ~/.femtocomrc
 ```
 
 - add default section to the config:
+```
+[default]
+	baud=115200
+	databits=8
+	parity=n
+	flow=n
+	stopbits=1
+	omap=crlf
+	port=/dev/ttyUSB0
+```
+
+
 TBA
-
-
