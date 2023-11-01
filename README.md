@@ -47,7 +47,7 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 $ touch ~/.femtocomrc
 ```
 
-- add global section to the config:
+- add default section to the config:
 TBA
 
 
