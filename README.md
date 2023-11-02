@@ -59,5 +59,6 @@ $ touch ~/.femtocomrc
 	port=/dev/ttyUSB0
 ```
 
+- add per-device section for a compatible device, i.e.:
 
 TBA
