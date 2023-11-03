@@ -60,5 +60,14 @@ $ touch ~/.femtocomrc
 ```
 
 - add per-device section for a compatible device, i.e.:
+```
+[CUSTOM_NAME]
+	baud=115200
+	databits=8
+	parity=n
+	flow=n
+	stopbits=1
+```
+
 
 TBA
