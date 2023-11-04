@@ -70,4 +70,12 @@ $ touch ~/.femtocomrc
 ```
 
 
-TBA
+## Testing a setup
+
+- connect a device
+- just run:
+`$ femtocom default`
+or - if it's added to the config:
+`$ femtocom CUSTOM_NAME`
+
+
