@@ -77,5 +77,6 @@ $ touch ~/.femtocomrc
 `$ femtocom default`
 or - if it's added to the config:
 `$ femtocom CUSTOM_NAME`
+- if everything is configured properly, then shell to a target device will be provided
 
 
