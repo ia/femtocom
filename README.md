@@ -7,6 +7,7 @@
 
 - picocom
 - configuration line for every device of interest in custom rules file for udev
+- femtocom script
 - configuration file for femtocom
 
 
