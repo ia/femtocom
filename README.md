@@ -43,7 +43,8 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 ### femtocom
 
-TBA
+- download the script
+- put the downloaded script to the directory
 
 
 ### femtocom config
