@@ -43,9 +43,9 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 ### femtocom
 
-- download the script:
+- download the script
 - set executable bit
-- put the downloaded script to the directory which is in PATH
+- put the downloaded script to the directory like `/usr/local/bin` or a similar one which is in `PATH` shell variable
 
 
 ### femtocom config
