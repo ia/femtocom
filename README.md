@@ -51,7 +51,10 @@ $ wget https://github.com/ia/femtocom/raw/main/femtocom
 ```
 $ chmod a+x femtocom
 ```
-- put the downloaded script to the directory like `/usr/local/bin` or a similar one which is in `PATH` shell variable
+- put the downloaded script to the directory like `/usr/local/bin` or a similar one which is in `PATH` shell variable:
+```
+$ mv femtocom DIRECTORY_WITH_BINS_INCLUDED_IN_PATH_VARIABLE
+```
 
 
 ### femtocom config
