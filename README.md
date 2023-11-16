@@ -45,15 +45,15 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 - download the script:
 ```
-$ wget https://github.com/ia/femtocom/raw/main/femtocom
+$ wget  https://github.com/ia/femtocom/raw/main/femtocom
 ```
 - set executable bit for the downloaded script:
 ```
-$ chmod a+x femtocom
+$ chmod  a+x  femtocom
 ```
 - put the downloaded script to the directory like `/usr/local/bin` or a similar one which is in `PATH` shell variable:
 ```
-$ mv femtocom DIRECTORY_WITH_BINS_INCLUDED_IN_PATH_VARIABLE
+$ mv  femtocom  DIRECTORY_WITH_BINS_INCLUDED_IN_PATH_VARIABLE
 ```
 
 
