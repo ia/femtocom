@@ -16,18 +16,18 @@
 Install picocom:
 - using package manager of your distribution like:
 ```
-apt install picocom
+$ sudo  apt  install  picocom
 ```
 or
 ```
-dnf install picocom
+$ sudo  dnf  install  picocom
 ```
 (or something similar)
 
 - using sources:
 ```
-$ git clone https://github.com/npat-efault/picocom
-$ cd picocom
+$ git  clone  https://github.com/npat-efault/picocom
+$ cd  picocom
 $ make
 ```
 
