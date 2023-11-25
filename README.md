@@ -1,14 +1,14 @@
 # femtocom
 
-`femtocom` is a simple shell-based wrapper for `picocom` terminal emulator app
+`femtocom` is a simple shell-based wrapper for `picocom` terminal emulator app.
 
 
 ## Prerequirements
 
-- [`picocom`](https://github.com/npat-efault/picocom)
-- configuration line for every device of interest in custom rules file for `udev`
-- `femtocom` script
-- configuration file for `femtocom`
+- [`picocom`](https://github.com/npat-efault/picocom);
+- configuration line for every device of interest in custom rules file for `udev`;
+- `femtocom` script;
+- configuration file for `femtocom`.
 
 
 ### picocom
