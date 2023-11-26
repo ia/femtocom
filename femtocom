@@ -56,7 +56,7 @@ test -n "${DEBUG}" && set -x
 ### main
 
 # extract global settings
-globals="$(sed '1,/^\[GLOBAL\]/d;/^ *$/,$d;  s/^\t*//g;  s/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
+globals="$(sed  -e '1,/^\[GLOBAL\]/d;/^ *$/,$d;'  -e $'s/^\t*//g;'  -e 's/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
 
 if [ -n "${1}" ]; then
 	section="${1}"
@@ -65,7 +65,7 @@ else
 fi;
 
 # extract settings for provided config section name
-options="$(sed '1,/^\['"${section}"'\]/d;/^ *$/,$d;  s/^\t*//g;  s/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
+options="$(sed  -e '1,/^\['"${section}"'\]/d;/^ *$/,$d;'  -e $'s/^\t*//g;'  -e 's/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
 
 # port value processing:
 
