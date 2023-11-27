@@ -43,8 +43,8 @@
 # 
 
 ### TODO: for v2 - add parser & options:
-### 		--list option to list "devices" from config
-###			--dump option to generate args for picocom from device without run
+###	--list option to list "devices" from config
+###	--dump option to generate args for picocom from device without run
 
 ### init
 
