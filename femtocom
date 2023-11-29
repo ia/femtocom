@@ -4,14 +4,14 @@
 #
 # config sample of ~/.femtocomrc by hardcoded variable CONF
 # $ cat ~/.femtocomrc
-# 
-# 
+#
+#
 # ; options from this section will be applied to ALL configurations
 # [GLOBAL]
 # 	echo=
 #   ; turns into `--echo' for picocom command line
-# 
-# 
+#
+#
 # ; GLOBAL options + classic default: 115200@8N1 on ttyUSB0
 # [default]
 # 	baud=115200
@@ -22,29 +22,29 @@
 # 	stopbits=1
 # 	port=/dev/ttyUSB0
 #   ; turns into `picocom OPTIONS /dev/ttyUSB0`
-# 
-# 
+#
+#
 # [myhwtool]
 # 	baud=9600
 # 	databits=8
 # 	parity=n
 # 	flow=n
 # 	stopbits=1
-# 
+#
 # $
-# 
+#
 # ; hence, the usage will be just as easy as:
-# 
+#
 # $ femtocom myhwtool
-# 
+#
 # which will turns into
-# 
+#
 # $ picocom --echo --baud 9600 --databits 8 --parity n --flow n --stopbits 1 /dev/myhwtool
-# 
+#
 
 ### TODO: for v2 - add parser & options:
-###	--list option to list "devices" from config
-###	--dump option to generate args for picocom from device without run
+### --list option to list "devices" from config
+### --dump option to generate args for picocom from device without run
 
 ### init
 
