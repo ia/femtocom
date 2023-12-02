@@ -47,7 +47,7 @@ $ sudo  udevadm  control --reload-rules  &&  sudo  udevadm  trigger
 
 ### femtocom
 
-- download the script:
+- download the [script](https://github.com/ia/femtocom/raw/main/femtocom):
 ```
 $ wget  https://github.com/ia/femtocom/raw/main/femtocom
 ```
