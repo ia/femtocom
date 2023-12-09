@@ -95,8 +95,10 @@ $ touch ~/.femtocomrc
 
 - connect a device;
 - just run:
-  - to use default settings:  
-`$ femtocom  default`
+  - to use default settings:
+```
+$ femtocom  default
+```
   - to use a device specific settings:
 ```
 $ femtocom  CUSTOM_NAME
