@@ -95,14 +95,10 @@ $ touch ~/.femtocomrc
 
 - connect a device;
 - just run:
-  - to use default settings:
-```
-$ femtocom  default
-```
-  - to use a device specific settings:
-```
-$ femtocom  CUSTOM_NAME
-```
+  - to use default settings:  
+`$ femtocom  default`
+  - to use a device specific settings:  
+`$ femtocom  CUSTOM_NAME`
 - if everything is configured properly, then shell to a target device will be initialized.
 
 
