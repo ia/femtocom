@@ -99,6 +99,8 @@ $ touch ~/.femtocomrc
 `$ femtocom  default`
   - to use a device specific settings:  
 `$ femtocom  CUSTOM_NAME`
-- if everything is configured properly, then shell to a target device will be initialized.
+- if everything is configured properly, then shell to a target device will be initialized:
+```
+TBA: add output```
 
 
