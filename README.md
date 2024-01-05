@@ -101,6 +101,42 @@ $ touch ~/.femtocomrc
 `$ femtocom  CUSTOM_NAME`
 - if everything is configured properly, then shell to a target device will be initialized:
 ```
-TBA: add output```
+$ femtocom hw
+
+====>>>> exit: hold CTRL and press: A X
+
+====>>>> picocom --baud 115200 --databits 8 --parity n --flow n --stopbits 1 /dev/hw
+
+picocom v3.2a
+
+port is        : /dev/hw
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+
+> help
+Available commands
+...
+```
 
 
