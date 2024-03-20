@@ -53,26 +53,6 @@ CONF=~/.femtocomrc
 set -e
 test -n "${DEBUG}" && set -x
 
-if [ -n "${1}" ] && [ "${1}" = "list-all" ]; then
-	echo "NOT IMPLEMENTED"
-	exit 0
-fi;
-
-if [ -n "${1}" ] && [ "${1}" = "list" ]; then
-	sed -ne '/^\[.*\]/p' ${CONF} | sed -e 's,\[,,g' -e 's,\],,g' | while read section; do
-		options="$(sed  -e '1,/^\['"${section}"'\]/d;/^ *$/,$d;'  -e $'s/^\t*//g;'  -e 's/^ *//g;  s/=$//g;  s/=/ /g;  /^;/d;  /^#/d;  s/^/--/g;'  ${CONF})"
-		if [ -z "`echo ${options} | grep "/dev/"`" ]; then
-			port="/dev/${section}"
-		else
-			port="`echo "${options}" | sed 's,.*--port ,,'`"
-		fi;
-		if [ -e "${port}" ]; then
-			sed  -e '1,/^\['"${section}"'\]/d;/^ *$/,$d;'  ${CONF}
-		fi;
-	done;
-	exit 0
-fi;
-
 ### main
 
 # extract global settings
