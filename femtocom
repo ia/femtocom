@@ -42,10 +42,6 @@
 # $ picocom --echo --baud 9600 --databits 8 --parity n --flow n --stopbits 1 /dev/myhwtool
 #
 
-### TODO: for v2 - add parser & options:
-### --list option to list "devices" from config
-### --dump option to generate args for picocom from device without run
-
 ### init
 
 CONF=~/.femtocomrc
