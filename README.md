@@ -1,6 +1,6 @@
 # femtocom
 
-`femtocom` is a simple shell-based wrapper for `picocom` terminal emulator app.
+`femtocom` is a simple shell-based wrapper-like scripting app for `picocom` terminal emulator app.
 
 
 ## Prerequirements
