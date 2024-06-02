@@ -5,6 +5,7 @@
 
 ## Prerequirements
 
+- modern _GNU/Linux_ distro;
 - [`picocom`](https://github.com/npat-efault/picocom);
 - configuration line for every device of interest in custom rules file for `udev`;
 - [`femtocom` script](https://github.com/ia/femtocom/raw/main/femtocom);
