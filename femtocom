@@ -41,6 +41,10 @@
 #
 # $ picocom --echo --baud 9600 --databits 8 --parity n --flow n --stopbits 1 /dev/myhwtool
 #
+# Hint:
+# b/s, baudrate = 1 second / ( the shortest bit lenght / 1 000 000* );
+#  *: 1 * 10^6 = uSeconds in 1 second
+#
 
 ### init
 
