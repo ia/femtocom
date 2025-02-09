@@ -141,3 +141,11 @@ Available commands
 ```
 
 
+| Hint: baudrate can be calculated by capturing sample with uart signal using logic analyzer and using this formula: |
+|:--------
+```
+b/s, baudrate = 1 second / ( the shortest bit lenght in uSeconds / 1 000 000* );
+  *: 1 * 10^6 = uSeconds in 1 second
+```
+
+
